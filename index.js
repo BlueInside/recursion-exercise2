@@ -7,3 +7,11 @@ function fibs(num = 0) {
   }
   return result;
 }
+
+function fibsRec(num = 0, result = [0, 1]) {
+  if (result.length >= num) return result;
+  else {
+    result.push(result[result.length - 1] + result[result.length - 2]);
+  }
+  return fibsRec(num, result);
+}
